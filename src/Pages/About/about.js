@@ -9,6 +9,10 @@ class About extends React.Component {
         this.props.history.push("/Home");  //Direct to Homepage
     }
 
+    handleSignout = () => {
+        this.props.history.push("/");
+    }
+
     render() {
         return (
             <div className="about">
@@ -31,8 +35,8 @@ class About extends React.Component {
                 <p className="about-p2"><b>Remember: If You See Something, Say Something.</b></p>
                 <br />
               
-            <button className="home" onClick={this.handleSubmit}>Back to Home</button>   
-            
+            <button className="home" onClick={this.handleSubmit}>Back to Home</button><p></p>   
+            <p><button className="signOut" onClick={this.handleSignout}>Sign Out</button>   </p>
         </div>
         );
     }

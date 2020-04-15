@@ -28,6 +28,10 @@ handleSubmit = () => {
     this.props.history.push("/Home");  //Direct to Homepage
 }
 
+handleSignout = () => {
+    this.props.history.push("/");
+}
+
 render() {
 
     var { isLoaded, items } = this.state;
@@ -61,7 +65,14 @@ render() {
                             type="submit" 
                             className="home"
                             onClick={this.handleSubmit}
-                        >Back to Home</button>        
+                        >Back to Home</button>
+                    <p>
+                        <button 
+                            type="submit" 
+                            className="signOut"
+                            onClick={this.handleSignout}
+                        >Sign Out</button>
+                    </p>
             </div>
         );
     }

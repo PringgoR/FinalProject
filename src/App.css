@@ -271,6 +271,15 @@
   color: white;
 }
 
+.signOut {
+  background-color: rgb(49, 162, 223);
+  font-size: 12pt;
+  padding: 10px;
+  color: white;
+  float: center;
+  margin-right: 20px;
+}
+
 .splash-c {
   background: #1f8dd6;
   z-index: 2;

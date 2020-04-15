@@ -19,6 +19,10 @@ export default class Home extends Component {
         this.props.history.push("/witness");
     }
 
+    handleSignout = () => {
+      this.props.history.push("/");
+  }
+
     //Double check below
     handleSuccessfulAuth(data) {
       this.props.handleLogin(data);
@@ -70,6 +74,7 @@ export default class Home extends Component {
             </div>
             </div>
         </div>
+        <button className="signOut" onClick={this.handleSignout}>Sign Out</button>
         </div>
       );
     }

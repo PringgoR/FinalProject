@@ -14,13 +14,40 @@ import Confirmation from './Pages/Signupcomponent/confirmation';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './Redux/reducer';
-
+//New Additions
+// import { createRootNavigator } from "./router";
+// import { isSignedIn } from "./auth";
 
 let store  = createStore(reducers, applyMiddleware(thunk))
 
 export default class App extends React.Component {
+    //New trial Starts
+    //   constructor() {
+    //     super(props);
+      
+    //     this.state = {
+    //       signedIn: false,
+    //       checkedSignIn: false
+    //     };
+    //   }
 
+    //   componentDidMount() {
+    //     isSignedIn()
+    //       .then(res => this.setState({ signedIn: res, checkedSignIn: true }))
+    //       .catch(err => alert("An error has occured"));
+    //   }
+    // //NEw trial Ends
   render(){
+    //New trial Starts
+    // const { checkedSignIn, signedIn } = this.state;
+
+    // // If we haven't checked AsyncStorage yet, don't render anything (better ways to do this)
+    // if (!checkedSignIn) {
+    //   return null;
+    // }
+
+    // const Layout = createRootNavigator(signedIn);
+    //New trial Ends
       return(
           <BrowserRouter>
             <div className="App">
@@ -39,3 +66,4 @@ export default class App extends React.Component {
         );
       }
     }
+  

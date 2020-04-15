@@ -26,6 +26,10 @@ export default class fetchUsers extends React.Component {
         this.props.history.push("/witness");
     }
 
+    handleSignout = () => {
+        this.props.history.push("/");
+    }
+
     render() {
         return(
             <div>
@@ -70,7 +74,12 @@ export default class fetchUsers extends React.Component {
                     type="submit" 
                     className="home"
                     onClick={this.handleWitness}
-                >View Witness List</button>
+                >View Witness List</button><p></p>
+                <p><button 
+                type="submit" 
+                className="signOut"
+                onClick={this.handleSignout}
+            >Sign Out</button></p>
             </div>
             
             )}
